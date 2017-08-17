@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+II64<>)))#include <bits/stdc++.h>
 #define pb push_back
 #define mp make_pair
 #define inf 0x3f3f3f3f
@@ -12,15 +12,16 @@ typedef pair<int,int> ii;
 typedef vector<ii> vii;
 //                                   Hello Hacker :D
 int main(){
-	ll t,n,k ;
-	ll mx = -1 ;
-	scanf("%I64d",&t);
+	int t,n;
+	ll k ;
+	int mx = -1 ;
+	scanf("%d",&t);
 	while(t--){
-	set<ll> st;
-        scanf("%I64d %I64d",&n,&k);
+	set<int> st;
+        scanf("%d %I64d",&n,&k);
         mx =max(mx,k);
         while(true){
-        k= k*k;
+        k= ll(k)*k;
         stringstream ss;
         ss << k;
         string s = ss.str();
@@ -31,7 +32,7 @@ int main(){
         if(st.find(k)!=st.end())break;
         st.insert(k);
         }
-        printf("%I64d\n",mx);
+        printf("%d\n",mx);
 	}
     return 0;
 }
