@@ -1,4 +1,4 @@
-II64<>)))#include <bits/stdc++.h>
+#include <bits/stdc++.h> // TLE
 #define pb push_back
 #define mp make_pair
 #define inf 0x3f3f3f3f
@@ -11,28 +11,39 @@ typedef vector<int> vi;
 typedef pair<int,int> ii;
 typedef vector<ii> vii;
 //                                   Hello Hacker :D
-int main(){
-	int t,n;
-	ll k ;
-	int mx = -1 ;
-	scanf("%d",&t);
-	while(t--){
-	set<int> st;
+int main()
+{
+   // freopen("myfile.txt","r",stdin);
+ //   freopen("myfile2.txt","w",stdout);
+    int t,n;
+    ll k ;
+    scanf("%d",&t);
+    while(t--)
+    {
+        set<ll> st;
+        ll mx = -1 ;
         scanf("%d %I64d",&n,&k);
-        mx =max(mx,k);
-        while(true){
-        k= ll(k)*k;
-        stringstream ss;
-        ss << k;
-        string s = ss.str();
-       // cout << s << endl;
-        k = atoi(s.substr(0,n).c_str());
-     //   cout << k <<endl;
-        mx =max(mx,k);
-        if(st.find(k)!=st.end())break;
-        st.insert(k);
+        if (k < 2)
+            printf("%d\n",k);
+        else
+        {
+            mx =max(mx,k);
+            while(true)
+            {
+                k= k*k;
+                stringstream ss;
+                ss << k;
+                string s = ss.str();
+                // cout << s << endl;
+                k = atoi(s.substr(0,n).c_str());
+                //   cout << k <<endl;
+                mx =max(mx,k);
+                if(st.find(k)!=st.end())break;
+                st.insert(k);
+            }
+        printf("%I64d",mx);
+        puts("");
         }
-        printf("%d\n",mx);
-	}
+    }
     return 0;
 }
