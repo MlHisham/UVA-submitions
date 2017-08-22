@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> // TLE
 #define pb push_back
 #define mp make_pair
 #define inf 0x3f3f3f3f
@@ -23,10 +23,6 @@ int main()
         set<ll> st;
         ll mx = -1 ;
         scanf("%d %I64d",&n,&k);
-        if (k < 2)
-            printf("%d\n",k);
-        else
-        {
             mx =max(mx,k);
             while(true)
             {
@@ -42,7 +38,6 @@ int main()
                 st.insert(k);
             }
         printf("%d\n",mx);
-        }
     }
     return 0;
 }
