@@ -41,8 +41,7 @@ int main()
                 if(st.find(k)!=st.end())break;
                 st.insert(k);
             }
-        printf("%I64d",mx);
-        puts("");
+        printf("%d\n",mx);
         }
     }
     return 0;
